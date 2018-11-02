@@ -42,7 +42,7 @@ public class MainActivityPresenterImpl implements MainActivityPresenterInterface
                     Channel channel = rss.getChannel();
                     newsList = (ArrayList<News>) channel.getAllNews();
                     for (News news : newsList) {
-                        bbcNews.append(news.getDescription() + "  ^_^  ");
+                        bbcNews.append(news.getDescription() + "  <^_^>  ");
                     }
                 }
 

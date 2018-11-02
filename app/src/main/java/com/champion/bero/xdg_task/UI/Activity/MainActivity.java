@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
 
     public void decreaseSpeed (View v){
         speed = marquee.getRndDuration();
+        if (speed * 1.2 > Long.MAX_VALUE) return;
         marquee.setRndDuration((long)(speed * 1.2));
         startScroll();
     }
