@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
     }
 
     public void appendBtn(View v){
+        if(newNews.getText().toString().equals("")) return;
         appendToMarquee(newNews.getText().toString());
         newNews.setText("");
 //        Toast.makeText(this, ""+marquee.getText().length()+"\n"+marquee.getRndDuration(), Toast.LENGTH_SHORT).show();
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
     }
 
     public void appendToMarquee(StringBuilder news){
+
         marquee.setText(news.toString());
         marquee.setRndDuration(marquee.getText().length()*100);
     }
